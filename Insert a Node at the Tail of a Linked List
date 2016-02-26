@@ -1,0 +1,25 @@
+struct Node{
+struct *Node next;
+int data;
+}
+
+Node* Insert(Node *head,int data)
+{
+ 	Node* node =new Node;
+  node->data= data;
+  node->next=NULL;
+
+if(head ==NULL){
+ head=node;
+}
+else
+{
+Node* pointer =head;
+while(pointer->next!=NULL)
+{
+pointer=pointer->next;
+}
+pointer->next =node;
+}
+return head;
+}
