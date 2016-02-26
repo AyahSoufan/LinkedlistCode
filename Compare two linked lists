@@ -1,0 +1,20 @@
+ struct Node
+  {
+     int data;
+     struct Node *next;
+  }
+  int CompareLists(Node *headA, Node* headB)
+{   
+while(headA!=NULL || headB!=NULL){
+ if((headA == NULL) || (headB == NULL))  
+       return 0; 
+  else{
+  if(headA->data != headB->data)
+      return 0;
+  }
+  headA=headA->next;
+  headB=headB->next;
+  
+}
+return 1;
+}
