@@ -1,0 +1,23 @@
+struct Node{
+int data;
+struct *Node next;
+}
+Node* insertinposition( Node* head, int data, int position){
+  Node* newnode=new Node;
+  newnode ->data=data;
+  newnode ->next=NULL;
+
+Node* pointer=head;
+if(position ==0){
+newnode->next=head;
+head= newnode;
+}
+else{
+while(--position){
+pointer=pointer->next;
+}
+newnode->next=pointer->next;
+pointer->next=newnode;
+}
+return head;
+}
