@@ -1,0 +1,12 @@
+struct Node{
+struct Node* next;
+int data;
+}
+
+void Print(Node *head){
+while(head != NULL)
+{
+cout << head ->data;
+head= head->next;
+}
+}
