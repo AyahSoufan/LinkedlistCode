@@ -1,0 +1,20 @@
+struct Node {
+int data;
+struct *Node next;
+}
+
+Node* Insethead (Node* head, int data){
+Node* newnode =new Node;
+newnode -> data= data;
+newnode -> next =NULL;
+
+if(head ==NULL){
+head= newnode;
+}
+else
+{
+newnode->next=head;
+head=newnode;
+}
+return head;
+}
