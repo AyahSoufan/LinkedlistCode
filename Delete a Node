@@ -1,0 +1,19 @@
+struct Node{
+int data;
+struct *Node next;
+}
+
+Node* deletenode(Node* head, int position){
+if(position==0){
+head= head ->next;
+}
+else{
+Node* pointer=new Node;
+    pointer=head;
+while(--position){
+pointer=pointer->next;
+}
+pointer->next= pointer->next->next;
+}
+    return head;
+}
